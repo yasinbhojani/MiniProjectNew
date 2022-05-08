@@ -102,13 +102,13 @@ main .main-title .vp-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 100px 0 0 0;
 }
 
 .courses-title span {
   display: block;
   font-size: 2rem;
   font-weight: bold;
-  margin: 20px 0;
 }
 
 .courses-title .line {
@@ -118,15 +118,15 @@ main .main-title .vp-text {
 }
 
 .courses {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
 
-.sub-courses{
+.sub-courses {
   display: flex;
   flex-direction: row;
-  justify-content: center
+  justify-content: space-around;
 }
 
 .courses-card {
@@ -139,7 +139,7 @@ main .main-title .vp-text {
   border-radius: 0.4rem;
   cursor: pointer;
   user-select: none;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.21);
+  box-shadow: 10px 11px 20px 6px rgba(0,0,0,0.21);
 }
 
 .courses-card img {
@@ -148,10 +148,6 @@ main .main-title .vp-text {
   margin: 0 0 30px 0;
 }
 
-.courses-card .courses-card-info h3{
+.courses-card .courses-card-info h3 {
   color: var(--gray);
-}
-
-.courses-card .courses-card-info p{
-  opacity: 0.8;
 }
