@@ -8,7 +8,7 @@
   --gold: #e7b147;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -74,6 +74,40 @@
 
 .popupbut:hover {
   background-color: #d1a242;
+}
+
+/* Dropdown */
+
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-container:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  border-radius: 3px;
+}
+
+.dropdown-container .dropdown a {
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  padding: 15px 10px;
+  border-bottom: 1px solid black;
+  color: black !important;
+  text-decoration: none;
+  transition: 0.2s background-color;
+}
+
+.dropdown-container .dropdown a:hover {
+  background-color: #f1f1f1;
 }
 
 /* Header */
@@ -252,7 +286,7 @@ main .main-title .vp-text {
   border: 1px solid var(--gray);
   box-sizing: border-box;
   transition: 0.3s all;
-  border-radius: 3px
+  border-radius: 3px;
 }
 
 .courses-btn:hover {
@@ -330,7 +364,6 @@ main .main-title .vp-text {
 .Mission {
   background-color: #525e7522;
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .Mission img {
@@ -347,4 +380,77 @@ main .main-title .vp-text {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-} 
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--gray);
+  padding: 40px 0;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer > div > section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  width: 33%;
+}
+
+footer .heading {
+  color: white;
+  display: block;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.map-container {
+  overflow: hidden;
+}
+
+.map img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  transition: 0.3s transform;
+}
+
+.map img:hover {
+  transform: scale(130%);
+}
+
+.courses-footer .courses-list {
+  width: 400px;
+}
+
+.courses-footer .courses-list a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s all;
+}
+
+.courses-footer .courses-list a:hover,
+.contact-info .contact-container .email a:hover {
+  color: var(--gold);
+}
+
+.contact-info .contact-container div {
+  color: white;
+  margin-top: 20px;
+}
+
+.contact-info .contact-container div span {
+  font-weight: bold;
+}
+
+.contact-info .contact-container .email a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
