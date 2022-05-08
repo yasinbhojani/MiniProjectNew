@@ -8,6 +8,74 @@
   --gold: #e7b147;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.popupdata {
+  background-color: white;
+  height: 470px;
+  width: 600px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
+}
+
+.popuph1 {
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.popupdiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.popupinput {
+  width: 60%;
+  height: 50px;
+  margin: auto;
+  border: none;
+  border-bottom: 3px solid #525e75;
+  font-size: 20px;
+  outline: none;
+}
+
+.popupbut {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  height: 40px;
+  background-color: #e7b147;
+  color: white;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.popupbut:hover {
+  background-color: #d1a242;
+}
+
 /* Header */
 
 header {
@@ -54,12 +122,26 @@ header {
   color: var(--gold);
 }
 
-.header-menu .header-menu-items .profile {
+/* .header-menu .header-menu-items .profile {
   font-weight: bold;
   color: var(--gold);
 }
 
 .header-menu .header-menu-items .profile:hover {
+  text-decoration: underline;
+} */
+
+#profile {
+  background: transparent;
+  border: none;
+}
+
+.header-menu .header-menu-items #profile {
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.header-menu .header-menu-items #profile:hover {
   text-decoration: underline;
 }
 
@@ -140,6 +222,7 @@ main .main-title .vp-text {
   cursor: pointer;
   user-select: none;
   box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
+  border-radius: 5px;
 }
 
 .courses-card img {
@@ -150,6 +233,7 @@ main .main-title .vp-text {
 
 .courses-card .courses-card-info h3 {
   color: var(--gray);
+  font-weight: bold;
 }
 
 .courses-card .courses-card-info p {
@@ -168,11 +252,13 @@ main .main-title .vp-text {
   border: 1px solid var(--gray);
   box-sizing: border-box;
   transition: 0.3s all;
+  border-radius: 3px
 }
 
 .courses-btn:hover {
   background-color: var(--gray);
   color: white;
+  cursor: pointer;
 }
 
 /* Principal Comment */
