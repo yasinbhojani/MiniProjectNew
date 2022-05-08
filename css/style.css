@@ -74,6 +74,7 @@ main {
   background-position: center;
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 main .main-title {
@@ -132,22 +133,132 @@ main .main-title .vp-text {
 .courses-card {
   width: 25%;
   padding: 20px;
-  margin: 30px;
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 0.4rem;
   cursor: pointer;
   user-select: none;
-  box-shadow: 10px 11px 20px 6px rgba(0,0,0,0.21);
+  box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
 }
 
 .courses-card img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   margin: 0 0 30px 0;
 }
 
 .courses-card .courses-card-info h3 {
   color: var(--gray);
 }
+
+.courses-card .courses-card-info p {
+  font-size: 0.8rem;
+}
+
+.courses-btn-container {
+  text-align: center;
+}
+
+.courses-btn {
+  margin: 30px 0;
+  border: none;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid var(--gray);
+  box-sizing: border-box;
+  transition: 0.3s all;
+}
+
+.courses-btn:hover {
+  background-color: var(--gray);
+  color: white;
+}
+
+/* Principal Comment */
+
+.comment {
+  background-color: #525e7522;
+  height: 350px;
+  text-align: center;
+}
+
+.comment h1 {
+  margin: auto;
+  text-align: center;
+  color: #525e75;
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  width: 570px;
+  font-size: 35px;
+}
+
+.comment img {
+  margin: 15px;
+}
+
+.comment .comment-img {
+  border-radius: 150px;
+  margin: 15px;
+}
+
+.comment p {
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: 500px;
+}
+
+/* Mission & Vision */
+
+.Vision > div,
+.Mission > div {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Vision img {
+  margin: 30px;
+  border-radius: 15px 50px;
+  margin-left: 100px;
+}
+
+.Vision h1,
+.Mission h1 {
+  margin: 30px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  width: 400px;
+  color: var(--gray);
+  font-size: 35px;
+}
+
+.Vision p,
+.Mission p {
+  margin: 30px;
+  width: 400px;
+}
+
+.Mission {
+  background-color: #525e7522;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Mission img {
+  margin: 30px;
+  border-radius: 15px 50px 30px 5px;
+  margin-right: 100px;
+}
+
+.Mission h1 {
+  margin-top: 50px;
+}
+
+.mission-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+} 
