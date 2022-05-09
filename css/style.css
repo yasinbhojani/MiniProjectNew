@@ -348,3 +348,48 @@ main .main-title .vp-text {
   flex-direction: column;
   align-items: flex-end;
 } 
+
+
+/* Sadiqhasan's Styles */
+
+/* course-content */
+
+.course-container{
+  min-height: 75.8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+  }
+.course{
+  min-height: 46.6vh;
+  width: 100%;
+  display: grid;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(11, 18, 44, 0.562), rgb(0, 0, 0)), url(../src/college-images/img-2-copy.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+  position: relative;
+}
+.course h1{
+  color: white;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 3.5px;
+}
+.course::after{
+  content: '';
+  width: 40%;
+  height: 4px;
+  text-align: center;
+  background: var(--gold) ;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease;
+}
