@@ -28,12 +28,26 @@
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;800&family=Roboto:wght@100;300;400;500;700;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-
+    <!-- JavaScript Links-->
+    <script src="javascript/typing.js" defer></script>
 </head>
 
 <body>
+    <!-- Log In pop up -->
+    <div class="popup">
+        <section class="popupdata">
+            <h1 class="popuph1">Welcome To VPIMSR</h1>
+            <div class="popupdiv">
+                <input type="text" placeholder="Username" class="popupinput" />
+                <br />
+                <input type="password" placeholder="Password" class="popupinput" />
+                <br />
+                <button class="popupbut">Log In</button>
+                <button class="popupbut" id="close">Close</button>
+            </div>
+        </section>
+    </div>
     <div class="master-container">
-        <!--Header-->
         <header>
             <div class="container-lg">
                 <div class="header-menu">
@@ -41,7 +55,7 @@
                         <img src="src/logo.png" alt="" />
                     </a>
                     <ul class="header-menu-items">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="" class="active">Home</a></li>
                         <li><a href="">Placements</a></li>
                         <div class="dropdown-container">
                             <li><a href="" class="dropdown-btn">Admission</a></li>
@@ -52,7 +66,7 @@
                             </div>
                         </div>
                         <li><a href="">Department</a></li>
-                        <li><a href="Courses.html" class="active">Courses</a></li>
+                        <li><a href="">Courses</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Gallery</a></li>
                         <li><button id="profile">Login</button></li>
@@ -63,17 +77,27 @@
 
         <!-- Course Section -->
 
-        <section class="main-content">
+        <div class="main-content">
             <div class="course-container">
                 <div class="course">
                     <h1> Courses </h1>
                 </div>
             </div>
-            <div class="our-courses">
-                Courses we offer
+            <div class="typing-content">
+                Courses We Offer
+                <div class="typing"></div>
+            </div>
+        </div>
+
+        <section class="main">
+            <div class="container-lg">
+                <div class="img-box">
+                    <img class="img" src="src/courses/Mcom-banner.jpg" alt="Commerce Dept"><img class="img"
+                        src="src/courses/m.com-banner-1.avif" alt="Computer Dept"><img class="img"
+                        src="src/courses/Mcom-banner.jpg" alt="Management Dept">
+                </div>
             </div>
         </section>
-    </div>
 </body>
 
 </html>

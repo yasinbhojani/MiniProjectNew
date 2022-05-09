@@ -460,19 +460,16 @@ footer .heading {
 /* course-content */
 
 .course-container{
-  min-height: 75.8vh;
+  min-height: 20.8vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  background-image:linear-gradient(rgba(27, 36, 70, 0.562), rgb(27, 36, 70, 0.562)) ;
-  border-top: 4px solid rgba(11,18,44,0.562) ;
-  border-bottom: 4px solid rgba(11,18,44,0.562) ;
   }
 .course{
-  min-height: 47.6vh;
+  min-height: 30vh;
   width: 100%;
   display: grid;
   flex-direction: column;
@@ -500,4 +497,75 @@ footer .heading {
   display: block;
   margin: auto;
   transition: 0.5s ease;
+}
+.typing-content{
+  text-align: center;
+  margin-top: 4vmax;
+  margin-bottom: 4vmax;
+  font-size: 200%;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  height: 100vh;
+  width: 100%;
+  color: black;
+  position: relative;
+}
+/* .typing::after{
+  content: '';
+  width: 6%;
+  height: 4px;
+  text-align: center;
+  background: linear-gradient(rgba(7, 7, 7, 0.808),rgba(5, 12, 51, 0.637)); 
+  display: block;
+  margin: auto;
+  transition: 0.5 ease-in-out;
+} */
+
+.typing-content{
+  height: 10vh;
+  width: 100%;
+  margin: 2% 0% 2%;
+  display: flex;
+  justify-content: center;
+  color: black;
+  position: relative;
+}
+
+.typing{
+  position: relative;
+  /* width: 20px; */
+  margin-left: 15px;
+  transition: 0.5 ease;
+  color: var(--gold)
+}
+.typing::after{
+  margin-top: 1.8%;
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 54.8%;
+  border-right: 2px solid black;
+  animation: bar 0.5s infinite ease 3s ;
+  /* animation-delay: 3s; */
+}
+
+@keyframes bar{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+.img-box{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+.img{
+  width: 50%;
+  margin: 1.66666%;
 }
