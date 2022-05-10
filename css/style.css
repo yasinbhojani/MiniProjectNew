@@ -390,10 +390,10 @@ main .main-title .vp-text {
 
 footer {
   background-color: var(--gray);
-  padding: 40px 0;
+  padding: 40px 0 20px 0;
 }
 
-footer > div {
+footer > .footer-container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -460,4 +460,19 @@ footer .heading {
   color: white;
   text-decoration: none;
   transition: all 0.2s;
+}
+
+/* Copyright */
+
+.hor-line{
+  color: white;
+  size: 50px !important;
+  margin: 20px 0;
+}
+
+#copyright{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
