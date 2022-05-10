@@ -76,6 +76,12 @@
   background-color: #d1a242;
 }
 
+#message{
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+
 /* Dropdown */
 
 .dropdown-container {
@@ -92,7 +98,12 @@
   position: absolute;
   background-color: white;
   min-width: 150px;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
+}
+
+.dropdown-container .dropdown a:last-child {
+  border-bottom: none;
 }
 
 .dropdown-container .dropdown a {
@@ -156,18 +167,10 @@ header {
   color: var(--gold);
 }
 
-/* .header-menu .header-menu-items .profile {
-  font-weight: bold;
-  color: var(--gold);
-}
-
-.header-menu .header-menu-items .profile:hover {
-  text-decoration: underline;
-} */
-
 #profile {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .header-menu .header-menu-items #profile {
@@ -191,6 +194,7 @@ main {
   display: flex;
   align-items: center;
   user-select: none;
+  animation: background-image 1s ease-in-out;
 }
 
 main .main-title {
@@ -410,6 +414,7 @@ footer .heading {
 }
 
 .map-container {
+  margin-top: 20px;
   overflow: hidden;
 }
 
@@ -426,6 +431,7 @@ footer .heading {
 
 .courses-footer .courses-list {
   width: 400px;
+  margin-top: 20px;
 }
 
 .courses-footer .courses-list a {
@@ -433,6 +439,7 @@ footer .heading {
   text-decoration: none;
   color: white;
   transition: 0.2s all;
+  line-height: 1.8;
 }
 
 .courses-footer .courses-list a:hover,

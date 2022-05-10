@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VPIMSR</title>
-    <link rel="icon" type="image/x-icon" href="src/logo.png">
+    <link rel="icon" type="image/x-icon" href="src/logo.png" />
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -13,16 +14,14 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
     <!-- JavaScript -->
     <script src="javascript/background-image.js" defer></script>
     <script src="javascript/popup.js" defer></script>
+    <script src="javascript/login.js" defer></script>
   </head>
 
   <body>
@@ -31,15 +30,28 @@
       <section class="popupdata">
         <h1 class="popuph1">Welcome To VPIMSR</h1>
         <div class="popupdiv">
-          <input type="text" placeholder="Username" class="popupinput" />
+          <input
+            type="text"
+            placeholder="Username"
+            class="popupinput"
+            id="username_input"
+          />
           <br />
-          <input type="password" placeholder="Password" class="popupinput" />
+          <input
+            type="password"
+            placeholder="Password"
+            class="popupinput"
+            id="password_input"
+          />
           <br />
+          <div id="message">hello</div>
           <button class="popupbut">Log In</button>
           <button class="popupbut" id="close">Close</button>
         </div>
       </section>
     </div>
+
+
     <div class="master-container">
       <header>
         <div class="container-lg">
@@ -62,11 +74,12 @@
               <li><a href="">Courses</a></li>
               <li><a href="">About</a></li>
               <li><a href="">Gallery</a></li>
-              <li><button id="profile">Login</button></li>
+              <li><a id="profile">Login</a></li>
             </ul>
           </div>
         </div>
       </header>
+
       <main>
         <div class="container-lg">
           <div class="main-title">
@@ -75,6 +88,8 @@
           </div>
         </div>
       </main>
+
+      <!-- Our Courses -->
       <section>
         <div class="container-lg">
           <div class="courses-title">
@@ -155,11 +170,14 @@
             </div>
           </div>
           <div class="courses-btn-container">
-            <button class="courses-btn">View All Courses</button>
+            <a href="courses.html"
+              ><button class="courses-btn">View All Courses</button></a
+            >
           </div>
         </div>
       </section>
 
+      <!-- Pricipals's Comment -->
       <section class="comment">
         <div class="container-lg">
           <img src="src/quotes.svg" alt="" width="60px" height="60px" />
@@ -178,6 +196,7 @@
         </div>
       </section>
 
+      <!-- Vision -->
       <section class="Vision">
         <div class="container-lg">
           <div>
@@ -193,6 +212,7 @@
         </div>
       </section>
 
+      <!-- Mission -->
       <section class="Mission">
         <div class="container-lg">
           <img src="src/stu1.JPG" alt="" width="440px" height="280px" />
@@ -259,5 +279,12 @@
         </div>
       </footer>
     </div>
+
+    <!-- Bootstrap (Do not touch) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
