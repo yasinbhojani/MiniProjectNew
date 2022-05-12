@@ -1,0 +1,23 @@
+/* Global */
+
+:root {
+  --gray: #525e75;
+  --gold: #e7b147;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Admission Form */
+
+.admission-form {
+  padding: 40px 0;
+}
+
+.admission-form .form-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

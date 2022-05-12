@@ -27,7 +27,7 @@ function changeName(index) {
   const profile = document.querySelector('#profile');
   profile.textContent = index.name;
   profile.style.textTransform = 'capitalize';
-  profile.setAttribute('href',`https://github.com/${index.git}`)
+  profile.setAttribute('href', `https://github.com/${index.git}`)
   profile.setAttribute('target', '_blank');
 
   profile.addEventListener('click', () => {
@@ -46,7 +46,9 @@ login.addEventListener('click', () => {
       msg.style.opacity = '1'
       msg.textContent = 'Login Successful, You may close this window now'
       msg.style.color = 'green'
+      loggedIn = index;
       changeName(index);
+      updateName();
       break
     } else {
       msg.style.opacity = '1'
@@ -55,3 +57,6 @@ login.addEventListener('click', () => {
     }
   }
 })
+
+
+

@@ -232,7 +232,7 @@ main .main-title .vp-text {
   font-weight: bold;
 }
 
-.courses-title .line {
+.line {
   height: 3px;
   width: 100px;
   background-color: var(--gray);
