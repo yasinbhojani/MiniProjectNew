@@ -18,15 +18,16 @@
   margin: 0 auto;
 }
 
+form {
+  margin: 30px 0;
+}
+
 .admission-form .form-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-form {
-  margin: 30px 0;
-}
 
 .form-section-heading {
   background: #525e7522;
