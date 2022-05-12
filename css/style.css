@@ -76,7 +76,7 @@
   background-color: #d1a242;
 }
 
-#message{
+#message {
   text-align: center;
   font-size: 0.9rem;
   opacity: 0;
@@ -89,7 +89,8 @@
   position: relative;
 }
 
-.dropdown-container:hover .dropdown {
+.dropdown-container:hover .dropdown,
+.dropdown-container:active .dropdown {
   display: block;
 }
 
@@ -464,13 +465,13 @@ footer .heading {
 
 /* Copyright */
 
-.hor-line{
+.hor-line {
   color: white;
   size: 50px !important;
   margin: 20px 0;
 }
 
-#copyright{
+#copyright {
   color: white;
   display: flex;
   justify-content: space-between;
