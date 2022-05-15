@@ -3,6 +3,7 @@
 :root {
   --gray: #525e75;
   --gold: #e7b147;
+  --red : #ff4444;
 }
 
 * {
@@ -27,7 +28,6 @@ form {
   flex-direction: column;
   align-items: center;
 }
-
 
 .form-section-heading {
   background: #525e7522;
@@ -121,4 +121,22 @@ th:nth-of-type(4) {
 
 [contenteditable] {
   outline: none;
+}
+
+.form-btn-container {
+  text-align: center;
+}
+
+.form-btn-container .form-btn {
+  width: 110px;
+  margin: 30px 5px;
+}
+
+.form-btn-red {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+.form-btn-red:hover{
+  background-color: var(--red);
+  color: white;
 }
