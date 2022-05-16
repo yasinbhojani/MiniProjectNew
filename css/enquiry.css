@@ -3,7 +3,7 @@
 :root {
   --gray: #525e75;
   --gold: #e7b147;
-  --red : #ff4444;
+  --red: #ff4444;
 }
 
 * {
@@ -94,35 +94,6 @@ form {
   font-weight: normal;
 }
 
-table {
-  margin: 30px auto;
-  border-radius: 5px;
-}
-
-th,
-td {
-  border: 1px solid black;
-  padding: 5px 10px;
-  height: 34px;
-}
-
-th:nth-of-type(1) {
-  width: 50%;
-}
-th:nth-of-type(2) {
-  width: 15%;
-}
-th:nth-of-type(3) {
-  width: 15%;
-}
-th:nth-of-type(4) {
-  width: 20%;
-}
-
-[contenteditable] {
-  outline: none;
-}
-
 .form-btn-container {
   text-align: center;
 }
@@ -136,7 +107,9 @@ th:nth-of-type(4) {
   color: var(--red);
   border: 1px solid var(--red);
 }
-.form-btn-red:hover{
+
+.form-btn-red:hover,
+.form-btn-red:active {
   background-color: var(--red);
   color: white;
 }

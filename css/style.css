@@ -290,7 +290,8 @@ main .main-title .vp-text {
   border-radius: 3px;
 }
 
-.gray-btn:hover {
+.gray-btn:hover,
+.gray-btn:active {
   background-color: var(--gray);
   color: white;
   cursor: pointer;
