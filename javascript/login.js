@@ -27,7 +27,7 @@ function changeName(index) {
   const profile = document.querySelector('#profile');
   profile.textContent = index.name;
   profile.style.textTransform = 'capitalize';
-  profile.setAttribute('href', `https://github.com/${index.git}`)
+  profile.setAttribute('href', `${index.name}.html`)
   profile.setAttribute('target', '_blank');
 
   profile.addEventListener('click', () => {

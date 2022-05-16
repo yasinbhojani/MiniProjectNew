@@ -1,0 +1,38 @@
+.resume h1 {
+    color: #e7b147;
+    margin: 50px 0px 30px 0px;
+    font-size: 40px;
+}
+
+.resume p {
+    line-height: 20px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.resume h2 {
+    color: #e7b147;
+    text-decoration: underline;
+    font-size: 30px;
+    margin: 50px 0px 40px 0px;
+}
+
+.resume li {
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.paper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.resume a {
+    color: black;
+    text-decoration: none;
+}
+
+.resume a:hover {
+    color: #e7b147;
+}
