@@ -96,6 +96,7 @@
   min-width: 150px;
   border-radius: 5px;
   box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
+  overflow: hidden;
 }
 
 .dropdown-container .dropdown a:last-child {
