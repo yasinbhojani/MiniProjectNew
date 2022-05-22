@@ -22,44 +22,35 @@
 }
 
 
-/* Student Heired */
+/* Student Placement */
 
-.stuProfile div {
-    margin: 0px;
-    padding: 0px;
-    height: 230px;
+.placement {
+    padding: 5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 600px;
 }
 
-.courses h1 {
-    text-align: center;
-    font-size: 30px;
-    padding: 30px;
+.placement img {
+    margin-top: 10px;
 }
 
-.stuProfile div img {
-    padding: 20px;
-    margin: 10px auto;
+.placement p {
+    font-size: 20px;
 }
 
-.stuProfile div p {
-    text-align: center;
-    font-size: 25px;
-    font-weight: 500;
+.divideintwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-
-/* Placement Cell */
-
-.info,
-.lest {
-    font-size: 19px;
-    width: 100%;
-    margin: auto;
-    line-height: 2;
-}
-
-.hedding {
-    margin: 20px;
+@media only screen and (max-width: 1400px) {
+    .divideintwo {
+        flex-direction: column;
+    }
+    .placement {
+        margin: 20px auto;
+    }
 }
