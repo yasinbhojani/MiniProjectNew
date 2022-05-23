@@ -99,6 +99,7 @@
   border-radius: 5px;
   box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
   overflow: hidden;
+  z-index: 1;
 }
 
 .dropdown-container .dropdown a:last-child {
@@ -133,6 +134,7 @@ header {
   position: sticky;
   top: 0;
   right: 0;
+  z-index: 35;
 }
 
 .header-menu {
@@ -165,7 +167,9 @@ header {
 
 .header-menu .header-menu-items li .active {
   border-bottom: 3px solid var(--gold);
-  padding-bottom: 28px;
+  padding-bottom: 28.9px;
+  position: relative;
+  z-index: 0;
 }
 
 .header-menu .header-menu-items li a:hover {

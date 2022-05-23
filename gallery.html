@@ -17,7 +17,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/fees.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
 
     <!-- JavaScript -->
     <script src="javascript/popup.js" defer></script>
@@ -62,19 +62,26 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="placement.html">Placements</a></li>
               <div class="dropdown-container">
-                <li><a href="" class="dropdown-btn active">Admission
-                  <img src="src/arrow_drop_down.svg" alt="" class="arrow-down">
-                </a></li>
+                <li>
+                  <a href="" class="dropdown-btn"
+                    >Admission
+                    <img
+                      src="src/arrow_drop_down.svg"
+                      alt=""
+                      class="arrow-down"
+                    />
+                  </a>
+                </li>
                 <div class="dropdown">
                   <a href="enquiry.html">Enquiry Form</a>
                   <a href="">Payment</a>
-                  <a href="">Courses Fees</a>
+                  <a href="fees.html">Courses Fees</a>
                 </div>
               </div>
               <li><a href="">Activities</a></li>
               <li><a href="">Courses</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="" class="active">Gallery</a></li>
               <li><a id="profile">Login</a></li>
             </ul>
           </div>
@@ -82,104 +89,105 @@
       </header>
 
       <!-- Write here -->
+      <div class="container-lg">
+        <section class="image-gallery">
+            <!-- Library -->
+            <h1>Image Gallery</h1>
+            <div class="image-heading">
+              <h3>Library</h3>
+              <div class="line"></div>
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/library/1.jpg" alt="" />
+              <img src="src/gallery/library/10.jpg" alt="" />
+              <img src="src/gallery/library/3.jpg" alt="" />
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/library/4.jpg" alt="" />
+              <img src="src/gallery/library/6.jpg" alt="" />
+              <img src="src/gallery/library/8.jpg" alt="" />
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/library/7.jpg" alt="" />
+              <img src="src/gallery/library/9.jpg" alt="" />
+              <img src="src/gallery/library/2.jpg" alt="" />
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/newPhotos/1.jpg" alt="">
+              <img src="src/gallery/newPhotos/2.jpg" alt="">
+              <img src="src/gallery/newPhotos/3.jpg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/newPhotos/4.jpg" alt="">
+              <img src="src/gallery/newPhotos/7.jpg" alt="">
+              <img src="src/gallery/newPhotos/8.jpg" alt="">
+            </div>
+            
+            <!-- Placements -->
+            <div class="image-heading">
+              <h3>Placements</h3>
+              <div class="line"></div>
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/placements/4.jpg" alt="">
+              <img src="src/gallery/placements/1.jpg" alt="">
+              <img src="src/gallery/placements/2.jpg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/placements/3.jpg" alt="">
+              <img src="src/gallery/placements/6.jpg" alt="">
+              <img src="src/gallery/placements/7.jpg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/placements/9.jpg" alt="">
+              <img src="src/gallery/placements/5.jpg" alt="">
+              <img src="src/gallery/placements/10.jpg" alt="">
+            </div>
+            
+            <!-- College -->
+            <div class="image-heading">
+              <h3>College</h3>
+              <div class="line"></div>
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/college/vpimsr-front.jpg" alt="">
+              <img src="src/gallery/college/auditorium.jpg" alt="">
+              <img src="src/gallery/college/left-garden2.jpg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/college/memorial1.jpg" alt="">
+              <img src="src/gallery/newPhotos/9.jpg" alt="">
+              <img src="src/gallery/college/parking2.jpg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/college/left-garden.jpg" alt="">
+              <img src="src/gallery/college/vpimsr-front5.jpg" alt="">
+              <img src="src/gallery/newPhotos/10.jpg" alt="">
+            </div>
 
-      <section class="fees-detail">
-        <div class="container-lg">
-          <div class="fees-detail-heading">
-            <h3>Course Wise Fees</h3>
-            <div class="line"></div>
+            <!-- Lakshya -->
+            <div class="image-heading">
+              <h3>Lakshya</h3>
+              <div class="line"></div>
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/lakshya/1.jpeg" alt="">
+              <img src="src/gallery/lakshya/2.jpeg" alt="">
+              <img src="src/gallery/lakshya/3.jpeg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/lakshya/5.jpeg" alt="">
+              <img src="src/gallery/lakshya/6.jpeg" alt="">
+              <img src="src/gallery/lakshya/7.jpeg" alt="">
+            </div>
+            <div class="image-section">
+              <img src="src/gallery/lakshya/14.jpeg" alt="">
+              <img src="src/gallery/lakshya/8.jpeg" alt="">
+              <img src="src/gallery/lakshya/17.jpeg" alt="">
+            </div>
           </div>
-          <div class="fees-detail-table">
-            <table>
-              <thead>
-                <tr>
-                  <td>Course</td>
-                  <td>Class</td>
-                  <td>Fees Amount</td>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- BBA -->
-                <tr>
-                  <td rowspan="3">BBA</td>
-                  <td>BBA - I</td>
-                  <td>8503</td>
-                </tr>
-                <tr>
-                  <td>BBA - II</td>
-                  <td>8258</td>
-                </tr>
-                <tr>
-                  <td>BBA - III</td>
-                  <td>7903</td>
-                </tr>
-                <!-- BCA -->
-                <tr>
-                  <td rowspan="3">BCA</td>
-                  <td>BCA - I</td>
-                  <td>16503</td>
-                </tr>
-                <tr>
-                  <td>BCA - II</td>
-                  <td>16258</td>
-                </tr>
-                <tr>
-                  <td>BCA - III</td>
-                  <td>15903</td>
-                </tr>
-                <!-- MBA -->
-                <tr>
-                  <td rowspan="2">MBA</td>
-                  <td>MBA - I</td>
-                  <td>101422</td>
-                </tr>
-                <tr>
-                  <td>MBA - II</td>
-                  <td>100503</td>
-                </tr>
-                <!-- MCA -->
-                <tr>
-                  <td rowspan="2">MCA</td>
-                  <td>MCA - I</td>
-                  <td>81642</td>
-                </tr>
-                <tr>
-                  <td>MCA - II</td>
-                  <td>73503</td>
-                </tr>
-                <!-- M.Com -->
-                <tr>
-                  <td rowspan="2">M.Com</td>
-                  <td>M.Com - I</td>
-                  <td>5513</td>
-                </tr>
-                <tr>
-                  <td>M.Com - II</td>
-                  <td>4903</td>
-                </tr>
-                <!-- DBM -->
-                <tr>
-                  <td>DBM</td>
-                  <td>-</td>
-                  <td>8903</td>
-                </tr>
-                <!-- DIT -->
-                <tr>
-                  <td>DIT</td>
-                  <td>-</td>
-                  <td>5803</td>
-                </tr>
-                <!-- PGDCA -->
-                <tr>
-                  <td>PGDCA</td>
-                  <td>-</td>
-                  <td>11113</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <footer>
         <div class="container-lg footer-container">

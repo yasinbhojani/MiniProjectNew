@@ -1,0 +1,38 @@
+h1{
+  text-align: center;  
+  margin-bottom: 30px;
+}
+.image-heading{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-section {
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-section img {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-section img:hover{
+  opacity: 1;
+}
+
+.image-gallery{
+  padding: 50px 0;
+}
+
+@media(min-width: 1300px) {
+  .image-section{
+    width: 90%;
+  }
+}
