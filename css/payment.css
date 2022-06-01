@@ -1,0 +1,32 @@
+.payment-dives {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.box {
+    box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.payment-card {
+    margin: 0px 10px;
+}
+
+.pay-button {
+    background-color: #5FD068;
+    color: white;
+    border: 1px solid #5FD068;
+    font-weight: 500;
+    margin: 20px auto;
+    width: 95%;
+    height: 40px;
+    padding: 0px;
+}
+
+.pay-button:hover {
+    background-color: #54b65c;    
+}

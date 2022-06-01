@@ -1,0 +1,15 @@
+.data-sub {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 2px solid #198754;
+  /* border-radius: 3px; */
+  background: #198754;
+  color: white;
+  font-weight: 600;
+  text-align: "center";
+}
