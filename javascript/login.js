@@ -20,6 +20,11 @@ const data = [
     name: 'zakir',
     pass: 'zakir123',
     git: 'zakirhusain-3802'
+  },
+  {
+    name: 'admin',
+    pass: 'php123',
+    git: ''
   }
 ]
 
@@ -28,6 +33,9 @@ function changeName(index) {
   profile.textContent = index.name;
   profile.style.textTransform = 'capitalize';
   profile.setAttribute('href', `${index.name}.html`)
+  if(index.name === 'admin') {
+    profile.setAttribute('href', `${index.name}.php`)
+  }
   profile.setAttribute('target', '_blank');
 
   profile.addEventListener('click', () => {
