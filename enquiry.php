@@ -53,7 +53,7 @@
                   <img src="src/arrow_drop_down.svg" alt="" class="arrow-down">
                 </a></li>
               <div class="dropdown">
-                <a href="enquiry.php">Enquiry Form</a>
+                <a href="">Enquiry Form</a>
                 <a href="payment.html">Payment</a>
                 <a href="fees.html">Courses Fees</a>
               </div>
