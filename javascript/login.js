@@ -28,6 +28,13 @@ const data = [
   }
 ]
 
+window.onload = function () {
+  let jsonString = sessionStorage.getItem("logged");
+  console.log(jsonString);
+  let index = JSON.parse(jsonString);
+  changeName(index);
+}
+
 function changeName(index) {
   const profile = document.querySelector('#profile');
   profile.textContent = index.name;
@@ -56,7 +63,8 @@ login.addEventListener('click', () => {
       msg.style.color = 'green'
       loggedIn = index;
       changeName(index);
-      updateName();
+      //saving login data to session storage
+      sessionStorage.setItem("logged", JSON.stringify(index));
       break
     } else {
       msg.style.opacity = '1'

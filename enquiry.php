@@ -19,6 +19,7 @@
   <!-- JavaScript -->
   <script src="javascript/popup.js" defer></script>
   <script src="javascript/login.js" defer></script>
+  <script src="javascript/enquiry.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +59,7 @@
                 <a href="fees.html">Courses Fees</a>
               </div>
             </div>
-            <li><a href="">Activities</a></li>
+            <li><a href="activity.html">Activities</a></li>
             <li><a href="Courses.html">Courses</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
@@ -72,47 +73,54 @@
 
     <!-- Admission Form -->
     <div class="data-sub">
-      <?php
-      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "admission";
+      <div>
 
-        $conn = mysqli_connect($servername, $username, $password, $database);
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          $servername = "localhost:3303";
+          $username = "root";
+          $password = "";
+          $database = "vpimsr_db";
 
-        if ($conn) {
+          $conn = mysqli_connect($servername, $username, $password, $database);
 
-          $fname = $_POST['fname'];
-          $mname = $_POST['mname'];
-          $lname = $_POST['lname'];
-          $eadd = $_POST['add'];
-          $ecity = $_POST['city'];
-          $estate = $_POST['state'];
-          $epin = $_POST['pin'];
-          $emobile = $_POST['mobile'];
-          $ecell = $_POST['cell'];
-          $eemail = $_POST['email'];
-          @$egender = $_POST['gender'];
-          $edob = $_POST['dob'];
-          $eaadhar = $_POST['aadhar'];
-          @$ecourse = $_POST['course'];
-          $edes = $_POST['des'];
+          if ($conn) {
 
-          $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";
+            $fname = $_POST['fname'];
+            $mname = $_POST['mname'];
+            $lname = $_POST['lname'];
+            $eadd = $_POST['add'];
+            $ecity = $_POST['city'];
+            $estate = $_POST['state'];
+            $epin = $_POST['pin'];
+            $emobile = $_POST['mobile'];
+            $ecell = $_POST['cell'];
+            $eemail = $_POST['email'];
+            @$egender = $_POST['gender'];
+            $edob = $_POST['dob'];
+            $eaadhar = $_POST['aadhar'];
+            @$ecourse = $_POST['course'];
+            $edes = $_POST['des'];
 
-          $insert = mysqli_query($conn, $data);
+            $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";
 
-          if ($insert) {
-            echo "Success! Your data has been stored.";
+            $insert = mysqli_query($conn, $data);
+
+            if ($insert) {
+              echo "Success! Your data has been stored.";
+            } else {
+              die("\n Data is not recorded successfully...... :(") . mysqli_error($conn);
+            }
           } else {
-            die("\n Data is not recorded successfully...... :(") . mysqli_error($conn);
+            die("\n Connection was not done successfully...... :(");
           }
-        } else {
-          die("\n Connection was not done successfully...... :(");
+          mysqli_close($conn);
         }
-      }
-      ?>
+        ?>
+      </div>
+      <div>
+        <img src="src/close.svg" alt="" class="close-btn">
+      </div>
     </div>
     <section class="admission-form">
       <div class="container-lg">
@@ -227,51 +235,9 @@
 
           <div class="form-btn-container">
             <button type="reset" class="gray-btn form-btn form-btn-red">Clear</button>
-            <button type="submit" class="gray-btn form-btn">Submit</button>
+            <button type="submit" class="gray-btn form-btn" id="submit-btn">Submit</button>
           </div>
-          <!-- <div class="data-sub"> -->
-          <!-- <?php
-                // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                //   $servername = "localhost";
-                //   $username = "root";
-                //   $password = "";
-                //   $database = "admission";
 
-                //   $conn = mysqli_connect($servername, $username, $password, $database);
-
-                //   if ($conn) {
-
-                //     $fname = $_POST['fname'];
-                //     $mname = $_POST['mname'];
-                //     $lname = $_POST['lname'];
-                //     $eadd = $_POST['add'];
-                //     $ecity = $_POST['city'];
-                //     $estate = $_POST['state'];
-                //     $epin = $_POST['pin'];
-                //     $emobile = $_POST['mobile'];
-                //     $ecell = $_POST['cell'];
-                //     $eemail = $_POST['email'];
-                //     @$egender = $_POST['gender'];
-                //     $edob = $_POST['dob'];
-                //     $eaadhar = $_POST['aadhar'];
-                //     @$ecourse = $_POST['course'];
-                //     $edes = $_POST['des'];
-
-                //     $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";
-
-                //     $insert = mysqli_query($conn, $data);
-
-                //     if ($insert) {
-                //       echo "Success! Your data has been stored.";
-                //     } else {
-                //       die("\n Data is not recorded successfully...... :(") . mysqli_error($conn);
-                //     }
-                //   } else {
-                //     die("\n Connection was not done successfully...... :(");
-                //   }
-                // }
-                ?>
-          </div> -->
         </form>
       </div>
     </section>

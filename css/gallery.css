@@ -19,12 +19,11 @@ h1{
   height: 200px;
   width: 300px;
   object-fit: cover;
-  opacity: 0.9;
   transition: all 0.3s ease-in-out;
 }
 
 .image-section img:hover{
-  opacity: 1;
+  box-shadow: 3px 3px 20px 6px rgba(0, 0, 0, 0.21);
 }
 
 .image-gallery{

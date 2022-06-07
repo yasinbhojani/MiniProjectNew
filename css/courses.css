@@ -108,6 +108,7 @@
   width: 20%;
   height: 2vh;
   border-bottom: 3px solid var(--gold);
+  top: 20px;
 }
 .course-grid{
   width: 50%;
@@ -214,6 +215,7 @@
   height: 1vh;
   width: 15%;
   border-bottom: 3px solid var(--gold);
+  top: 20px;
 }
 
 .learn-env{

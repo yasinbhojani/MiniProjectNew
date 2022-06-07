@@ -11,9 +11,11 @@
     * {
       font-family: 'segoe UI', sans-serif;
     }
-    body{
+
+    body {
       height: 100vh;
     }
+
     .master-cont {
       text-align: center;
       width: 50%;
@@ -24,9 +26,11 @@
       transform: translate(-50%, -50%);
       padding: 50px;
     }
+
     .phpexe {
       margin-top: 20px;
     }
+
     input[type="submit"] {
       background-color: transparent;
       border: 1px solid #333;
@@ -37,7 +41,8 @@
       cursor: pointer;
       transition: all 0.3s;
     }
-    input[type="submit"]:hover{
+
+    input[type="submit"]:hover {
       background-color: #333;
       color: white;
     }
@@ -88,26 +93,37 @@
           die("Connection failed: " . mysqli_connect_error());
         }
 
-        $sql = "CREATE TABLE if not exists employees (
-                  id INT(2)  PRIMARY KEY, 
-                  firstname VARCHAR(30) NOT NULL,
-                  lastname VARCHAR(30) NOT NULL,
-                  email VARCHAR(50)
-                  )";
+        $sql = "CREATE TABLE IF NOT EXISTS enquiry_form (
+          fname VARCHAR(100),
+          mname VARCHAR(100),
+          lname VARCHAR(100),
+          eadd VARCHAR(255),
+          ecity VARCHAR(20),
+          estate VARCHAR(20),
+          epin VARCHAR(10),
+          emobile VARCHAR(20),
+          ecell VARCHAR(20),
+          eemail VARCHAR(30),
+          egender VARCHAR(20),
+          edob VARCHAR(20),
+          eaadhar VARCHAR(15),
+          ecourse VARCHAR(30),
+          edes VARCHAR(255)
+        );";
 
         if (mysqli_query($conn, $sql)) {
-          echo "Table employees created successfully";
+          echo "Table enquiry_form created successfully";
         } else {
           echo "Error creating table: " . mysqli_error($conn);
         }
         mysqli_close($conn);
-        }
+      }
 
-        if (array_key_exists('button1', $_POST)) {
-          create_db();
-        } else if (array_key_exists('button2', $_POST)) {
-          create_tbl();
-        }
+      if (array_key_exists('button1', $_POST)) {
+        create_db();
+      } else if (array_key_exists('button2', $_POST)) {
+        create_tbl();
+      }
 
       ?>
     </div>
