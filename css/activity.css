@@ -38,6 +38,7 @@ body {
 }
 
 .line {
+  background-color: gold;
   border: solid 2px gold;
   width: 10%;
   height: 1px;
@@ -130,15 +131,15 @@ a {
   width: 45%;
 }
 
-.a_list{
-    font-size: 20px;
-    width: 45%;
-    display: flex;
-    align-items: center;
+.a_list {
+  font-size: 20px;
+  width: 45%;
+  display: flex;
+  align-items: center;
 }
 
 .a_list ul {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 .c {

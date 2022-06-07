@@ -12,6 +12,11 @@ body{
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: #525e75CC;
+  color: white;
+}
+
 
 
 /* Popup */

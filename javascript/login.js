@@ -43,7 +43,7 @@ function changeName(index) {
   if(index.name === 'admin') {
     profile.setAttribute('href', `${index.name}.php`)
   }
-  profile.setAttribute('target', '_blank');
+  // profile.setAttribute('target', '_blank');
 
   profile.addEventListener('click', () => {
     document.querySelector(".popup").style.display = "none";
