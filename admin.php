@@ -13,7 +13,7 @@
     }
 
     body {
-      height: 100vh;
+      height: 95vh;
     }
 
     .master-cont {
@@ -31,21 +31,34 @@
       margin-top: 20px;
     }
 
-    input[type="submit"] {
+    a{
+      text-decoration: none;
+      color: black;
+      transition: all 0.3s;
+    }
+
+    input[type="submit"],
+    button {
       background-color: transparent;
       border: 1px solid #333;
       width: 150px;
       padding: 10px 0;
-      margin: 0 10px;
+      margin: 5px 10px;
       border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s;
     }
 
-    input[type="submit"]:hover {
+    input[type="submit"]:hover,
+    button:hover {
       background-color: #333;
       color: white;
     }
+
+    button:hover a{
+      color: white;
+    }
+
   </style>
 </head>
 
@@ -54,8 +67,19 @@
 
     <h1>Admin Page</h1>
     <form method="post">
+      <h2>Database & Tables</h2>
       <input type="submit" name="button1" class="button" value="create database" />
       <input type="submit" name="button2" class="button" value="create tables" />
+
+      <hr>
+
+      <h2>Reports</h2>
+      <button type="button" class="button"><a href="">enquiry_form</a></button>
+      <button type="button" class="button"><a href="">payment_form</a></button>
+      <br>
+      <button type="button" class="button"><a href="">payment_info</a></button>
+      <button type="button" class="button"><a href="">feedback_form</a></button>
+
     </form>
     <div class="phpexe">
       <?php
