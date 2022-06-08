@@ -17,6 +17,12 @@ body{
   color: white;
 }
 
+header *::selection,
+footer *::selection{
+  background-color: #3297FD;
+  color: white;
+}
+
 
 
 /* Popup */

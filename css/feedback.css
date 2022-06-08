@@ -1,0 +1,54 @@
+.feedback {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.feedback-img{
+  width: 40%;
+}
+
+.feedback-img img {
+  width: 100%;
+}
+
+.feedback-form {
+  width: 40%;
+  padding: 0 20px 20px 20px;
+  box-shadow: 10px 11px 20px 6px rgba(0, 0, 0, 0.21);
+  border-radius: 8px;
+  position: relative;
+}
+
+.feedback label {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.feedback input{
+  padding: 5px 10px;
+}
+
+.feedback select {
+  padding: 7px 10px;
+}
+
+.feedback textarea {
+  padding: 4px;
+  max-height: 130px;
+  min-height: 130px;
+}
+
+.feedback h4{
+  margin-left: 6px;
+}
+
+.feedback .gray-btn{
+  margin-bottom: 0;
+}
+
+.feedback-btn-container {
+  text-align: center;
+}

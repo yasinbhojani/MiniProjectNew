@@ -25,6 +25,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 50px;
+      border-radius: 8px;
     }
 
     .phpexe {
@@ -74,11 +75,11 @@
       <hr>
 
       <h2>Reports</h2>
-      <button type="button" class="button"><a href="">enquiry_form</a></button>
-      <button type="button" class="button"><a href="">payment_form</a></button>
+      <a href=""><button type="button" class="button">enquiry_form</button></a>
+      <a href=""><button type="button" class="button">payment_form</button></a>
       <br>
-      <button type="button" class="button"><a href="">payment_info</a></button>
-      <button type="button" class="button"><a href="">feedback_form</a></button>
+      <a href=""><button type="button" class="button">payment_info</button></a>
+      <a href=""><button type="button" class="button">feedback_form</button></a>
 
     </form>
     <div class="phpexe">
