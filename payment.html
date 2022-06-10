@@ -137,7 +137,8 @@
             <button type="submit" class="gray-btn form-btn" id="submit-btn">Submit</button>
           </div>
         </form>
-        <form action="" method="">
+
+        <form action="report/payment_method.php" method="POST">
         <div class="payment">
           <h3 class="form-section-heading">Payment Methods</h3>
 
@@ -153,11 +154,11 @@
                 <div class="form-one-line-container">
                   <div class="form-el-container">
                     <label for="mobile">First Name</label>
-                    <input type="tel" autocomplete="off" id="mobile" />
+                    <input type="tel" autocomplete="off" id="mobile" name="fname"/>
                   </div>
                   <div class="form-el-container">
                     <label for="mobile">Last Name</label>
-                    <input type="text" autocomplete="off" id="mobile" />
+                    <input type="text" autocomplete="off" id="mobile" name="lname"/>
                   </div>
                 </div>
               </div>
@@ -166,11 +167,11 @@
                 <div class="form-one-line-container">
                   <div class="form-el-container">
                     <label for="mobile">Card Number</label>
-                    <input type="tel" autocomplete="off" id="mobile" placeholder="xxxx-xxxx-xxxx-xxxx" />
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="xxxx-xxxx-xxxx-xxxx" name="cardNm"/>
                   </div>
                   <div class="form-el-container">
                     <label for="mobile">Security Code</label>
-                    <input type="tel" autocomplete="off" id="mobile" placeholder="CVV" />
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="CVV" name="cvv"/>
                   </div>
                 </div>
               </div>
@@ -179,11 +180,11 @@
                 <div class="form-one-line-container">
                   <div class="form-el-container">
                     <label for="mobile">Card Expiration</label>
-                    <input type="tel" autocomplete="off" id="mobile" placeholder="MM / YY" />
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="MM / YY" name="cardEx"/>
                   </div>
                   <div class="form-el-container">
                     <label for="mobile">Total Amount</label>
-                    <input type="tel" autocomplete="off" id="mobile" placeholder="Amount in $" />
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="Amount in $" name="totalAmt"/>
                   </div>
                 </div>
               </div>

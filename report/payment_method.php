@@ -49,14 +49,13 @@
             $conn = mysqli_connect($servername, $username, $password, $database);
             if ($conn) {
                 $fname = $_POST['fname'];
-                $mname = $_POST['mname'];
                 $lname = $_POST['lname'];
-                $mobile = $_POST['mobile'];
-                $email = $_POST['email'];
-                @$course = $_POST['course-interest'];
-                $des = $_POST['des'];
+                $cardNm = $_POST['cardNm'];
+                $cvv = $_POST['cvv'];
+                $cardEx = $_POST['cardEx'];
+                $totalAmt = $_POST['totalAmt'];
 
-                $data = "INSERT INTO paymentData(fname, mname, lname, mobile, email, course, pdes) VALUES ('$fname', '$mname', '$lname', '$mobile', '$email', '$course','$des')";
+                $data = "INSERT INTO paymentMethod(fname,lname, cardNum, securityCode, cardexp, totalamount) VALUES ('$fname', '$lname', '$cardNm', '$cvv', '$cardEx', '$totalAmt')";
 
                 $insert = mysqli_query($conn, $data);
 
