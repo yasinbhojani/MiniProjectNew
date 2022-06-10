@@ -32,7 +32,7 @@
       margin-top: 20px;
     }
 
-    a{
+    a {
       text-decoration: none;
       color: black;
       transition: all 0.3s;
@@ -56,10 +56,9 @@
       color: white;
     }
 
-    button:hover a{
+    button:hover a {
       color: white;
     }
-
   </style>
 </head>
 
@@ -75,11 +74,11 @@
       <hr>
 
       <h2>Reports</h2>
-      <a href=""><button type="button" class="button">enquiry_form</button></a>
-      <a href=""><button type="button" class="button">payment_form</button></a>
+      <a href="report/Enquiry_form_grid_view.php" target="_blank"><button type="button" class="button">enquiry_form</button></a>
+      <a href="report/payment-method-grid-view.php" target="_blank"><button type="button" class="button">payment_method</button></a>
       <br>
-      <a href=""><button type="button" class="button">payment_info</button></a>
-      <a href=""><button type="button" class="button">feedback_form</button></a>
+      <a href="report/payment-data-grid-view.php" target="_blank"><button type="button" class="button">payment_info</button></a>
+      <a href="report/feedback_grid_view.php" target="_blank"><button type="button" class="button">feedback_form</button></a>
 
     </form>
     <div class="phpexe">
