@@ -20,15 +20,30 @@ const data = [
     name: 'zakir',
     pass: 'zakir123',
     git: 'zakirhusain-3802'
+  },
+  {
+    name: 'admin',
+    pass: 'php123',
+    git: ''
   }
 ]
+
+window.onload = function () {
+  let jsonString = sessionStorage.getItem("logged");
+  console.log(jsonString);
+  let index = JSON.parse(jsonString);
+  changeName(index);
+}
 
 function changeName(index) {
   const profile = document.querySelector('#profile');
   profile.textContent = index.name;
   profile.style.textTransform = 'capitalize';
   profile.setAttribute('href', `${index.name}.html`)
-  profile.setAttribute('target', '_blank');
+  if(index.name === 'admin') {
+    profile.setAttribute('href', `${index.name}.php`)
+  }
+  // profile.setAttribute('target', '_blank');
 
   profile.addEventListener('click', () => {
     document.querySelector(".popup").style.display = "none";
@@ -48,7 +63,8 @@ login.addEventListener('click', () => {
       msg.style.color = 'green'
       loggedIn = index;
       changeName(index);
-      updateName();
+      //saving login data to session storage
+      sessionStorage.setItem("logged", JSON.stringify(index));
       break
     } else {
       msg.style.opacity = '1'

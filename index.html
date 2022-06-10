@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This Website Was Made By Soham, Sadiq, Zakir & Yaisn -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,6 +18,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/enquiry.css">
+    <link rel="stylesheet" href="css/feedback.css">
+
 
     <!-- JavaScript -->
     <script src="javascript/background-image.js" defer></script>
@@ -62,17 +66,24 @@
               <li><a href="" class="active">Home</a></li>
               <li><a href="placement.html">Placements</a></li>
               <div class="dropdown-container">
-                <li><a href="" class="dropdown-btn">Admission
-                  <img src="src/arrow_drop_down.svg" alt="" class="arrow-down">
-                </a></li>
+                <li>
+                  <a href="" class="dropdown-btn"
+                    >Admission
+                    <img
+                      src="src/arrow_drop_down.svg"
+                      alt=""
+                      class="arrow-down"
+                    />
+                  </a>
+                </li>
                 <div class="dropdown">
-                  <a href="enquiry.html">Enquiry Form</a>
-                  <a href="">Payment</a>
+                  <a href="enquiry.php">Enquiry Form</a>
+                  <a href="payment.html">Payment</a>
                   <a href="fees.html">Courses Fees</a>
                 </div>
               </div>
-              <li><a href="">Activities</a></li>
-              <li><a href="">Courses</a></li>
+              <li><a href="activity.html">Activities</a></li>
+              <li><a href="Courses.html">Courses</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="gallery.html">Gallery</a></li>
               <li><a id="profile">Login</a></li>
@@ -83,7 +94,7 @@
 
       <main>
         <div class="container-lg">
-          <div class="main-title">
+          <div class="main-title text1">
             <span>welcome to</span>
             <span class="vp-text">VPIMSR</span>
           </div>
@@ -171,7 +182,7 @@
             </div>
           </div>
           <div class="courses-btn-container">
-            <a href="courses.html"
+            <a href="Courses.html"
               ><button class="gray-btn">View All Courses</button></a
             >
           </div>
@@ -231,6 +242,61 @@
           </div>
         </div>
       </section>
+
+      <!-- Feedback Form -->
+      <div class="container-lg">
+        <section class="feedback">
+          <div class="feedback-img">
+            <img src="src/feedback/feedback.svg" alt="" />
+          </div>
+          <div class="feedback-form">
+            <form action="" method="post">
+              <h4>Feedback Form</h4>
+              <div class="form-el-container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+              </div>
+              <div class="form-el-container">
+                <label for="UI">How was the UI of the Website</label>
+                <select name="UI" id="UI">
+                  <option value="vgood">Very Good</option>
+                  <option value="good">Good</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
+                  <option value="vpoor">Very Poor</option>
+                </select>
+              </div>
+              <div class="form-el-container">
+                <label for="usability">How was the usability of the Website</label>
+                <select name="usability" id="usability">
+                  <option value="vgood">Very Good</option>
+                  <option value="good">Good</option>
+                  <option value="fair">Fair</option>
+                  <option value="poor">Poor</option>
+                  <option value="vpoor">Very Poor</option>
+                </select>
+              </div>
+              <div class="form-el-container">
+                <label for="return-to-website">Likelihood that you will return to the site</label>
+                <select name="return-to-website" id="return-to-website">
+                  <option value="extremelyLikely">Extremely Likely</option>
+                  <option value="veryLikely">Very Likely</option>
+                  <option value="moderatelyLikely">Moderately Likely</option>
+                  <option value="slightlyLikely">Slightly Likely</option>
+                  <option value="notLikely">Not Likely</option>
+                </select>
+              </div>
+              <div class="form-el-container">
+                <label for="suggestion">Any Suggestions?</label>
+                <textarea name="suggestion" id="suggestion"></textarea>
+              </div>
+              <div class="feedback-btn-container">
+                <button type="submit" class="gray-btn" id="submit-btn">Submit Feedback</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
 
       <footer>
         <div class="container-lg footer-container">

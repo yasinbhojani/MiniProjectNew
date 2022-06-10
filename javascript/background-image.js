@@ -1,4 +1,4 @@
-const images = ["auditorium.jpg", "left-garden.jpg", "vpimsr-front5.jpg", "left-garden2.jpg", "memorial1.jpg", "parking2.jpg", "vpimsr-front.jpg"];
+const images = ["vpimsr-front.jpg", "left-garden.jpg", "vpimsr-front5.jpg", "left-garden2.jpg", "memorial1.jpg", "parking2.jpg", "auditorium.jpg"];
 
 const main = document.querySelector('main');
 
