@@ -119,6 +119,7 @@
 
         // Enquiry Table
         $sql = "CREATE TABLE IF NOT EXISTS enquiry_form (
+          enquiry_no INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
           fname VARCHAR(100),
           mname VARCHAR(100),
           lname VARCHAR(100),
