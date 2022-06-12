@@ -48,7 +48,6 @@
                     <tr>
                         <th>Payment ID</th>
                         <th>First Name</th>
-                        <th>Last Name</th>
                         <th>Card Number</th>
                         <th>Security Code</th>
                         <th>Card Expiry</th>

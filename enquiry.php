@@ -79,7 +79,7 @@
         // checking if the request method is post or not.
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           //Connetion of database.
-          $servername = "localhost:3303";
+          $servername = "localhost";
           $username = "root";
           $password = "";
           $database = "vpimsr_db";

@@ -75,7 +75,7 @@
                     if (!$conn) {
                         die("Connection was not done successfully! -->" . mysqli_connect_error($conn));
                     } else {
-                        $select = "SELECT * FROM enquiry_form";
+                        $select = "SELECT * FROM enquiry_form ";
 
                         $data = mysqli_query($conn, $select);
 
