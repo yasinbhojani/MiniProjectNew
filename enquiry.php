@@ -99,7 +99,7 @@
             @$egender = $_POST['gender'];
             $edob = $_POST['dob'];
             $eaadhar = $_POST['aadhar'];
-            @$ecourse = $_POST['course'];
+            @$ecourse = $_POST['course-interest'];
             $edes = $_POST['des'];
 
             $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";

@@ -29,8 +29,9 @@
             flex-direction: column;
             align-items: center;
         }
-        .header::after{
-            content:'';
+
+        .header::after {
+            content: '';
             position: relative;
             width: 100px;
             height: 10px;
@@ -46,7 +47,6 @@
             <table class="content-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>UI</th>
                         <th>Stability</th>
@@ -57,7 +57,7 @@
                 <tbody>
                     <?php
                     //Connection part.
-                    $servername = "localhost";
+                    $servername = "localhost:3303";
                     $username = "root";
                     $password = "";
                     $database = "vpimsr_db";
@@ -79,7 +79,6 @@
                             while ($report = mysqli_fetch_assoc($data)) {
                                 echo "
                                 <tr>
-                                    <td>" . $report['id'] . "</td>
                                     <td>" . $report['fname'] . "</td>
                                     <td>" . $report['ui'] . "</td>
                                     <td>" . $report['stability'] . "</td>
