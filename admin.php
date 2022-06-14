@@ -85,7 +85,7 @@
       <?php
       function create_db()
       {
-        $servername = "localhost:3303";
+        $servername = "localhost";
         $username = "root";
         $password = "";
 
