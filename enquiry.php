@@ -74,7 +74,7 @@
     <!-- Admission Form -->
     <div class="data-sub">
       <div>
-
+        // this is the part of enquiry form
         <?php
         // checking if the request method is post or not.
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
