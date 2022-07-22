@@ -46,7 +46,6 @@
             <table class="content-table">
                 <thead>
                     <tr>
-                        <th>Enquiry No.</th>
                         <th>Full name</th>
                         <th>Address</th>
                         <th>City</th>
@@ -65,7 +64,7 @@
                 <tbody>
                     <?php
                     //Connection part.
-                    $servername = "localhost";
+                    $servername = "localhost:3303";
                     $username = "root";
                     $password = "";
                     $database = "vpimsr_db";
@@ -87,7 +86,6 @@
                             while ($report = mysqli_fetch_assoc($data)) {
                                 echo "
                                 <tr>
-                                    <td>" . $report['enquiry_no'] . "</td>
                                     <td class='name'>" . $report['fname'] . " " . $report['mname'] . " " . $report['lname'] . "</td>
                                     <td class='address'>" . $report['eadd'] . "</td>
                                     <td>" . $report['ecity'] . "</td>

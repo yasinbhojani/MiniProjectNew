@@ -101,7 +101,7 @@
             @$egender = $_POST['gender'];
             $edob = $_POST['dob'];
             $eaadhar = $_POST['aadhar'];
-            @$ecourse = $_POST['course'];
+            @$ecourse = $_POST['course-interest'];
             $edes = $_POST['des'];
             
             //Insert query part.

@@ -52,12 +52,163 @@
       </section>
     </div>
 
+<<<<<<< HEAD
     <div class="master-container">
       <header>
         <div class="container-lg">
           <div class="header-menu">
             <a href="http://www.vpimsr.edu.in/" target="_blank">
               <img src="src/logo.png" alt="" />
+=======
+    <section class="admission-form">
+      <div class="container-lg">
+        <div class="form-heading">
+          <h2>Payment Form</h2>
+          <div class="line"></div>
+        </div>
+
+        <form action="report/payment-data.php" method="POST">
+          <div class="personal-info">
+            <h3 class="form-section-heading">personal information</h3>
+
+            <div class="form-one-line-container">
+              <div class="form-el-container">
+                <label for="name">Name</label>
+                <div class="name-container">
+                  <input type="text" id="name" autocomplete="off" placeholder="FIRSTNAME" name="fname" />
+                  <input type="text" id="fname" autocomplete="off" placeholder="MIDDLENAME" name="mname" />
+                  <input type="text" id="lname" autocomplete="off" placeholder="LASTNAME" name="lname" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-one-line-container">
+            <div class="form-el-container">
+              <label for="mobile">Mobile</label>
+              <input type="tel" autocomplete="off" id="mobile" name="mobile" />
+            </div>
+            <div class="form-el-container">
+              <label for="email">Email</label>
+              <input type="email" autocomplete="off" id="email" name="email" />
+            </div>
+          </div>
+
+          <div class="enquiry-info">
+            <h3 class="form-section-heading">payment information</h3>
+
+            <div class="form-one-line-container">
+              <div class="form-el-container">
+                <label for="course">Class</label>
+                <select name="course-interest" id="course">
+                  <option value="">--Select Course--</option>
+                  <option value="BCA">BCA</option>
+                  <option value="BBA">BBA</option>
+                  <option value="MCA">MCA</option>
+                  <option value="MBA">MBA</option>
+                  <option value="DIT">DIT</option>
+                  <option value="PGDCA">PGDCA</option>
+                  <option value="DBM">DBM</option>
+                  <option value="M.com">M.Com</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-one-line-container">
+              <div class="form-el-container">
+                <label for="description">Description</label>
+                <textarea name="des" id="" cols="30" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form-btn-container">
+            <button type="reset" class="gray-btn form-btn form-btn-red">Clear</button>
+            <button type="submit" class="gray-btn form-btn" id="submit-btn">Submit</button>
+          </div>
+        </form>
+
+        <form action="report/payment_method.php" method="POST">
+        <div class="payment">
+          <h3 class="form-section-heading">Payment Methods</h3>
+
+          <div class="form-el-container payment-dives">
+            <div class="box">
+              <div>
+                <img src="src/payment/maestro.png" alt="" width="50px" class="payment-card" />
+                <img src="src/payment/visa.png" alt="" width="50px" class="payment-card" />
+                <img src="src/payment/rupay.png" alt="" width="50px" class="payment-card" />
+              </div>
+
+              <div>
+                <div class="form-one-line-container">
+                  <div class="form-el-container">
+                    <label for="mobile">First Name</label>
+                    <input type="tel" autocomplete="off" id="mobile" name="fname"/>
+                  </div>
+                  <div class="form-el-container">
+                    <label for="mobile">Last Name</label>
+                    <input type="text" autocomplete="off" id="mobile" name="lname"/>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="form-one-line-container">
+                  <div class="form-el-container">
+                    <label for="mobile">Card Number</label>
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="xxxx-xxxx-xxxx-xxxx" name="cardNm"/>
+                  </div>
+                  <div class="form-el-container">
+                    <label for="mobile">Security Code</label>
+                    <input type="password" autocomplete="off" id="mobile" placeholder="CVV" name="cvv"/>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="form-one-line-container">
+                  <div class="form-el-container">
+                    <label for="mobile">Card Expiration</label>
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="MM / YY" name="cardEx"/>
+                  </div>
+                  <div class="form-el-container">
+                    <label for="mobile">Total Amount</label>
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="Amount in $" name="totalAmt"/>
+                  </div>
+                </div>
+              </div>
+
+              <div style="text-align: center">
+                <button type="submit" class="gray-btn form-btn pay-button">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div class="box">
+              <div>
+                <img src="src/payment/google-pay.png" alt="" width="50px" class="payment-card" />
+                <img src="src/payment/paypal.png" alt="" width="70px" class="payment-card" />
+              </div>
+              <div>
+                <img src="src/payment/QR-Code (Soham).jfif" alt="" width="300px" />
+              </div>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-lg footer-container">
+        <section class="map">
+          <h3 class="heading">Maps</h3>
+          <div class="map-container">
+            <a href="https://www.google.com/maps/place/V.P.+Institute+of+Management+Studies+%26+Research/@16.841187,74.6210434,14.75z/data=!4m5!3m4!1s0x3bc1225e591c9b77:0x281f0db03fdc162d!8m2!3d16.8401904!4d74.6194138"
+              target="blank">
+              <img src="src/map.png" alt="" />
+>>>>>>> 9786979e5345ecc8d14b5f00863d4d4a02231259
             </a>
             <ul class="header-menu-items">
               <li><a href="index.html">Home</a></li>
@@ -96,6 +247,7 @@
             <div class="line"></div>
           </div>
 
+<<<<<<< HEAD
           <form action="">
             <div class="personal-info">
               <h3 class="form-section-heading">personal information</h3>
@@ -353,3 +505,6 @@
     ></script>
   </body>
 </html>
+=======
+</html>
+>>>>>>> 9786979e5345ecc8d14b5f00863d4d4a02231259
