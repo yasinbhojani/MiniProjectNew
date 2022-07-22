@@ -74,18 +74,20 @@
     <!-- Admission Form -->
     <div class="data-sub">
       <div>
-
+        <!-- this is the part of enquiry form -->
         <?php
+        // checking if the request method is post or not.
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-          $servername = "localhost:3303";
+          //Connetion of database.
+          $servername = "localhost";
           $username = "root";
           $password = "";
           $database = "vpimsr_db";
 
           $conn = mysqli_connect($servername, $username, $password, $database);
 
-          if ($conn) {
-
+          if ($conn) {  // checking if connection of is done or not.
+            // initailized variable for insertion query execution.
             $fname = $_POST['fname'];
             $mname = $_POST['mname'];
             $lname = $_POST['lname'];
@@ -99,14 +101,15 @@
             @$egender = $_POST['gender'];
             $edob = $_POST['dob'];
             $eaadhar = $_POST['aadhar'];
-            @$ecourse = $_POST['course'];
+            @$ecourse = $_POST['course-interest'];
             $edes = $_POST['des'];
-
+            
+            //Insert query part.
             $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";
-
+            //query execution part.
             $insert = mysqli_query($conn, $data);
 
-            if ($insert) {
+            if ($insert) {  // checking if data stored or not.
               echo "Success! Your data has been stored.";
             } else {
               die("\n Data is not recorded successfully...... :(") . mysqli_error($conn);
