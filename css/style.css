@@ -209,8 +209,7 @@ header {
 /* Main Content */
 
 main {
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(../src/college/vpimsr-front.jpg);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(../src/college/vpimsr-front.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   height: 90vh;
@@ -219,7 +218,6 @@ main {
   display: flex;
   align-items: center;
   user-select: none;
-  animation: background-image 1s ease-in-out;
 }
 
 main .main-title {

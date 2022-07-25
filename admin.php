@@ -32,7 +32,7 @@
       margin-top: 20px;
     }
 
-    a{
+    a {
       text-decoration: none;
       color: black;
       transition: all 0.3s;
@@ -56,10 +56,9 @@
       color: white;
     }
 
-    button:hover a{
+    button:hover a {
       color: white;
     }
-
   </style>
 </head>
 
@@ -75,18 +74,18 @@
       <hr>
 
       <h2>Reports</h2>
-      <a href=""><button type="button" class="button">enquiry_form</button></a>
-      <a href=""><button type="button" class="button">payment_form</button></a>
+      <a href="report/Enquiry_form_grid_view.php" target="_blank"><button type="button" class="button">enquiry_form</button></a>
+      <a href="report/payment-method-grid-view.php" target="_blank"><button type="button" class="button">payment_method</button></a>
       <br>
-      <a href=""><button type="button" class="button">payment_info</button></a>
-      <a href=""><button type="button" class="button">feedback_form</button></a>
+      <a href="report/payment-data-grid-view.php" target="_blank"><button type="button" class="button">payment_info</button></a>
+      <a href="report/feedback_grid_view.php" target="_blank"><button type="button" class="button">feedback_form</button></a>
 
     </form>
     <div class="phpexe">
       <?php
       function create_db()
       {
-        $servername = "localhost:3303";
+        $servername = "localhost";
         $username = "root";
         $password = "";
 
@@ -118,7 +117,9 @@
           die("Connection failed: " . mysqli_connect_error());
         }
 
+        // Enquiry Table
         $sql = "CREATE TABLE IF NOT EXISTS enquiry_form (
+          enquiry_no INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
           fname VARCHAR(100),
           mname VARCHAR(100),
           lname VARCHAR(100),
@@ -137,10 +138,66 @@
         );";
 
         if (mysqli_query($conn, $sql)) {
-          echo "Table enquiry_form created successfully";
+          echo "Table enquiry_form created successfully<br>";
         } else {
           echo "Error creating table: " . mysqli_error($conn);
         }
+
+
+        // Feedback Table
+        $sql2 = "CREATE TABLE IF NOT EXISTS feedback (
+          fname VARCHAR(30), 
+          ui VARCHAR(30), 
+          stability VARCHAR(30), 
+          likely VARCHAR(30), 
+          suggestion VARCHAR(255)
+        );";
+
+        if (mysqli_query($conn, $sql2)) {
+          echo "Table feedback created successfully<br>";
+        } else {
+          echo "Error creating table: " . mysqli_error($conn);
+        }
+
+
+        // payment data
+        $sql3 = "CREATE TABLE IF NOT EXISTS paymentData (
+          pay_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+          fname VARCHAR(50), 
+          mname VARCHAR(50), 
+          lname VARCHAR(50), 
+          mobile varchar(50), 
+          email varchar(200), 
+          course varchar(30), 
+          pdes varchar(300)
+        );";
+
+        if (mysqli_query($conn, $sql3)) {
+          echo "Table paymentData created successfully<br>";
+        } else {
+          echo "Error creating table: " . mysqli_error($conn);
+        }
+
+
+        // Payment method 
+        $sql4 = "CREATE TABLE IF NOT EXISTS paymentMethod (
+          pay_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+          fname VARCHAR(50), 
+          lname VARCHAR(50), 
+          cardNum NUMERIC, 
+          securityCode NUMERIC,
+          cardexp varchar(50), 
+          totalamount NUMERIC
+        );";
+
+        if (mysqli_query($conn, $sql4)) {
+          echo "Table paymentMethod created successfully<br>";
+        } else {
+          echo "Error creating table: " . mysqli_error($conn);
+        }
+
+
+
         mysqli_close($conn);
       }
 
