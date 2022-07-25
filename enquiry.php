@@ -103,23 +103,47 @@
             $eaadhar = $_POST['aadhar'];
             @$ecourse = $_POST['course-interest'];
             $edes = $_POST['des'];
-            
+
             //Insert query part.
             $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";
             //query execution part.
             $insert = mysqli_query($conn, $data);
 
             if ($insert) {  // checking if data stored or not.
-              echo "Success! Your data has been stored.";
+              echo "Success! Your data has been stored, ";
             } else {
               die("\n Data is not recorded successfully...... :(") . mysqli_error($conn);
             }
           } else {
             die("\n Connection was not done successfully...... :(");
           }
-          mysqli_close($conn);
         }
         ?>
+        <span>
+          <?php
+          $servername = 'localhost';
+          $username = 'root';
+          $password = '';
+          $db = 'vpimsr_db';
+
+          $conn = mysqli_connect($servername, $username, $password, $db);
+
+          $query = "SELECT * FROM enquiry_form ORDER BY enquiry_id desc limit 1";
+
+          $data = mysqli_query($conn, $query);
+
+          $row = mysqli_num_rows($data);
+
+          if ($row == 0) {
+            echo "zero rows in the table";
+          } else {
+            while ($report = mysqli_fetch_assoc($data)) {
+              echo "and your ragistration id is: " . $report['enquiry_id'];
+            }
+          }
+          mysqli_close($conn);
+          ?>
+        </span>
       </div>
       <div>
         <img src="src/close.svg" alt="" class="close-btn">
