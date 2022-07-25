@@ -7,17 +7,17 @@ let currentText = '';   // This array will store the current string from the arr
 let letter = '';    // This variable will specify the letter of the string.
 
 (function type() {  // created function typing effect 
-  if (count === texts.length /*length will not count the number like array, actually it will count from 1, so the text.length will count the array of strings from 1.*/){ // if the count === texts.length means 8 === 8 then it will reset the count and eventually it will become a loop.
+  if (count === texts.length){ // if the count === texts.length means 8 === 8 then it will reset the count and eventually it will become a loop.
     count = 0;  // count is reseted if the above condition is true.
   }
   currentText = texts[count]; // The currentTime is storing the first string from texts variable  
-  letter = currentText.slice(0, ++index); // this will slice the currentText value and it will go individually from 0,1,2,3,4 alphabets.
+  letter = currentText.slice(0, ++individual_char); // this will slice the currentText value and it will go individually from 0,1,2,3,4 alphabets.
     
   document.querySelector('.typing').textContent = letter; // changing the typing css content to letter means our animation will work and our functionallity will also work.
 
   if(letter.length === currentText.length){ // 
     count++;
-      index = 0;
+      individual_char = 0;
   }
 
   setTimeout(type, 100);
