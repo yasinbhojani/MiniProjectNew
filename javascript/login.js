@@ -30,7 +30,6 @@ const data = [
 
 window.onload = function () {
   let jsonString = sessionStorage.getItem("logged");
-  console.log(jsonString);
   let index = JSON.parse(jsonString);
   changeName(index);
 }
