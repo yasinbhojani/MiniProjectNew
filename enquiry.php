@@ -150,6 +150,7 @@
       </div>
     </div>
     <section class="admission-form">
+      
       <div class="container-lg">
         <div class="form-heading">
           <h2>Enquiry Form</h2>
