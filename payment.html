@@ -1,355 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VPIMSR</title>
-    <link rel="icon" type="image/x-icon" href="src/logo.png" />
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPIMSR</title>
+  <link rel="icon" type="image/x-icon" href="src/logo.png" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/enquiry.css" />
-    <link rel="stylesheet" href="css/payment.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <!-- JavaScript -->
-    <script src="javascript/popup.js" defer></script>
-    <script src="javascript/login.js" defer></script>
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/enquiry.css" />
+  <link rel="stylesheet" href="css/payment.css" />
 
-  <body>
-    <!-- Log In pop up -->
-    <div class="popup">
-      <section class="popupdata">
-        <h1 class="popuph1">Welcome To VPIMSR</h1>
-        <div class="popupdiv">
-          <input
-            type="text"
-            placeholder="Username"
-            class="popupinput"
-            id="username_input"
-          />
-          <br />
-          <input
-            type="password"
-            placeholder="Password"
-            class="popupinput"
-            id="password_input"
-          />
-          <br />
-          <div id="message">hello</div>
-          <button class="popupbut">Log In</button>
-          <button class="popupbut" id="close">Close</button>
+  <!-- JavaScript -->
+  <script src="javascript/popup.js" defer></script>
+  <script src="javascript/login.js" defer></script>
+</head>
+
+<body>
+  <!-- Log In pop up -->
+  <div class="popup">
+    <section class="popupdata">
+      <h1 class="popuph1">Welcome To VPIMSR</h1>
+      <div class="popupdiv">
+        <input type="text" placeholder="Username" class="popupinput" id="username_input" />
+        <br />
+        <input type="password" placeholder="Password" class="popupinput" id="password_input" />
+        <br />
+        <div id="message">hello</div>
+        <button class="popupbut">Log In</button>
+        <button class="popupbut" id="close">Close</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="master-container">
+    <header>
+      <div class="container-lg">
+        <div class="header-menu">
+          <a href="http://www.vpimsr.edu.in/" target="_blank">
+            <img src="src/logo.png" alt="" />
+          </a>
+          <ul class="header-menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="placement.html">Placements</a></li>
+            <div class="dropdown-container">
+              <li>
+                <a href="" class="dropdown-btn active">Admission
+                  <img src="src/arrow_drop_down.svg" alt="" class="arrow-down" />
+                </a>
+              </li>
+              <div class="dropdown">
+                <a href="enquiry.php">Enquiry Form</a>
+                <a href="">Payment</a>
+                <a href="fees.html">Courses Fees</a>
+              </div>
+            </div>
+            <li><a href="activity.html">Activities</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a id="profile">Login</a></li>
+          </ul>
         </div>
-      </section>
-    </div>
+      </div>
+    </header>
 
-    <div class="master-container">
-      <header>
-        <div class="container-lg">
-          <div class="header-menu">
-            <a href="http://www.vpimsr.edu.in/" target="_blank">
-              <img src="src/logo.png" alt="" />
-            </a>
-            <ul class="header-menu-items">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="placement.html">Placements</a></li>
-              <div class="dropdown-container">
-                <li>
-                  <a href="" class="dropdown-btn active"
-                    >Admission
-                    <img
-                      src="src/arrow_drop_down.svg"
-                      alt=""
-                      class="arrow-down"
-                    />
-                  </a>
-                </li>
-                <div class="dropdown">
-                  <a href="enquiry.php">Enquiry Form</a>
-                  <a href="">Payment</a>
-                  <a href="fees.html">Courses Fees</a>
+    <section class="admission-form">
+      <div class="container-lg">
+        <div class="form-heading">
+          <h2>Payment Form</h2>
+          <div class="line"></div>
+        </div>
+
+        <form action="report/payment-data.php" method="POST">
+          <div class="personal-info">
+            <h3 class="form-section-heading">personal information</h3>
+
+            <div class="form-one-line-container">
+              <div class="form-el-container">
+                <label for="name">Name</label>
+                <div class="name-container">
+                  <input type="text" id="name" autocomplete="off" placeholder="FIRSTNAME" name="fname" />
+                  <input type="text" id="fname" autocomplete="off" placeholder="MIDDLENAME" name="mname" />
+                  <input type="text" id="lname" autocomplete="off" placeholder="LASTNAME" name="lname" />
                 </div>
               </div>
-              <li><a href="activity.html">Activities</a></li>
-              <li><a href="Courses.html">Courses</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a id="profile">Login</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-
-      <section class="admission-form">
-        <div class="container-lg">
-          <div class="form-heading">
-            <h2>Payment Form</h2>
-            <div class="line"></div>
+            </div>
           </div>
 
-          <form action="">
-            <div class="personal-info">
-              <h3 class="form-section-heading">personal information</h3>
+          <div class="form-one-line-container">
+            <div class="form-el-container">
+              <label for="mobile">Mobile</label>
+              <input type="tel" autocomplete="off" id="mobile" name="mobile" />
+            </div>
+            <div class="form-el-container">
+              <label for="email">Email</label>
+              <input type="email" autocomplete="off" id="email" name="email" />
+            </div>
+          </div>
 
-              <div class="form-one-line-container">
-                <div class="form-el-container">
-                  <label for="name">Name</label>
-                  <div class="name-container">
-                    <input
-                      type="text"
-                      id="name"
-                      autocomplete="off"
-                      placeholder="FIRSTNAME"
-                    />
-                    <input
-                      type="text"
-                      id="fname"
-                      autocomplete="off"
-                      placeholder="MIDDLENAME"
-                    />
-                    <input
-                      type="text"
-                      id="lname"
-                      autocomplete="off"
-                      placeholder="LASTNAME"
-                    />
-                  </div>
-                </div>
+          <div class="enquiry-info">
+            <h3 class="form-section-heading">payment information</h3>
+
+            <div class="form-one-line-container">
+              <div class="form-el-container">
+                <label for="course">Class</label>
+                <select name="course-interest" id="course">
+                  <option value="">--Select Course--</option>
+                  <option value="BCA">BCA</option>
+                  <option value="BBA">BBA</option>
+                  <option value="MCA">MCA</option>
+                  <option value="MBA">MBA</option>
+                  <option value="DIT">DIT</option>
+                  <option value="PGDCA">PGDCA</option>
+                  <option value="DBM">DBM</option>
+                  <option value="M.com">M.Com</option>
+                </select>
               </div>
             </div>
 
             <div class="form-one-line-container">
               <div class="form-el-container">
-                <label for="mobile">Mobile</label>
-                <input type="tel" autocomplete="off" id="mobile" />
-              </div>
-              <div class="form-el-container">
-                <label for="email">Email</label>
-                <input type="email" autocomplete="off" id="email" />
+                <label for="description">Description</label>
+                <textarea name="des" id="" cols="30" rows="5"></textarea>
               </div>
             </div>
+          </div>
+          <div class="form-btn-container">
+            <button type="reset" class="gray-btn form-btn form-btn-red">Clear</button>
+            <button type="submit" class="gray-btn form-btn" id="submit-btn">Submit</button>
+          </div>
+        </form>
 
-            <div class="enquiry-info">
-              <h3 class="form-section-heading">payment information</h3>
+        <form action="report/payment_method.php" method="POST">
+        <div class="payment">
+          <h3 class="form-section-heading">Payment Methods</h3>
 
-              <div class="form-one-line-container">
-                <div class="form-el-container">
-                  <label for="course">Class</label>
-                  <select name="course-interest" id="course">
-                    <option value="">--Select Course--</option>
-                    <option value="BCA">BCA</option>
-                    <option value="BBA">BBA</option>
-                    <option value="MCA">MCA</option>
-                    <option value="MBA">MBA</option>
-                    <option value="DIT">DIT</option>
-                    <option value="PGDCA">PGDCA</option>
-                    <option value="DBM">DBM</option>
-                    <option value="M.com">M.Com</option>
-                  </select>
+          <div class="form-el-container payment-dives">
+            <div class="box">
+              <div>
+                <img src="src/payment/maestro.png" alt="" width="50px" class="payment-card" />
+                <img src="src/payment/visa.png" alt="" width="50px" class="payment-card" />
+                <img src="src/payment/rupay.png" alt="" width="50px" class="payment-card" />
+              </div>
+
+              <div>
+                <div class="form-one-line-container">
+                  <div class="form-el-container">
+                    <label for="mobile">First Name</label>
+                    <input type="tel" autocomplete="off" id="mobile" name="fname"/>
+                  </div>
+                  <div class="form-el-container">
+                    <label for="mobile">Last Name</label>
+                    <input type="text" autocomplete="off" id="mobile" name="lname"/>
+                  </div>
                 </div>
               </div>
 
-              <div class="form-one-line-container">
-                <div class="form-el-container">
-                  <label for="description">Description</label>
-                  <textarea name="" id="" cols="30" rows="5"></textarea>
-                </div>
-              </div>
-            </div>
-
-            <div class="payment">
-              <h3 class="form-section-heading">Payment Methods</h3>
-
-              <div class="form-el-container payment-dives">
-                <div class="box">
-                  <div>
-                    <img
-                      src="src/payment/maestro.png"
-                      alt=""
-                      width="50px"
-                      class="payment-card"
-                    />
-                    <img
-                      src="src/payment/visa.png"
-                      alt=""
-                      width="50px"
-                      class="payment-card"
-                    />
-                    <img
-                      src="src/payment/rupay.png"
-                      alt=""
-                      width="50px"
-                      class="payment-card"
-                    />
+              <div>
+                <div class="form-one-line-container">
+                  <div class="form-el-container">
+                    <label for="mobile">Card Number</label>
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="xxxx-xxxx-xxxx-xxxx" name="cardNm"/>
                   </div>
-
-                  <div>
-                    <div class="form-one-line-container">
-                      <div class="form-el-container">
-                        <label for="mobile">First Name</label>
-                        <input type="tel" autocomplete="off" id="mobile" />
-                      </div>
-                      <div class="form-el-container">
-                        <label for="mobile">Last Name</label>
-                        <input type="text" autocomplete="off" id="mobile" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="form-one-line-container">
-                      <div class="form-el-container">
-                        <label for="mobile">Card Number</label>
-                        <input
-                          type="tel"
-                          autocomplete="off"
-                          id="mobile"
-                          placeholder="xxxx-xxxx-xxxx-xxxx"
-                        />
-                      </div>
-                      <div class="form-el-container">
-                        <label for="mobile">Security Code</label>
-                        <input
-                          type="password"
-                          autocomplete="off"
-                          id="mobile"
-                          placeholder="CVV"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="form-one-line-container">
-                      <div class="form-el-container">
-                        <label for="mobile">Card Expiration</label>
-                        <input
-                          type="tel"
-                          autocomplete="off"
-                          id="mobile"
-                          placeholder="MM / YY"
-                        />
-                      </div>
-                      <div class="form-el-container">
-                        <label for="mobile">Total Amount</label>
-                        <input
-                          type="tel"
-                          autocomplete="off"
-                          id="mobile"
-                          placeholder="Amount in $"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div style="text-align: center">
-                    <button type="submit" class="gray-btn form-btn pay-button">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-
-                <div class="box">
-                  <div>
-                    <img
-                      src="src/payment/google-pay.png"
-                      alt=""
-                      width="50px"
-                      class="payment-card"
-                    />
-                    <img
-                      src="src/payment/paypal.png"
-                      alt=""
-                      width="70px"
-                      class="payment-card"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="src/payment/QR-Code (Soham).jfif"
-                      alt=""
-                      width="300px"
-                    />
+                  <div class="form-el-container">
+                    <label for="mobile">Security Code</label>
+                    <input type="password" autocomplete="off" id="mobile" placeholder="CVV" name="cvv"/>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </section>
 
-      <footer>
-        <div class="container-lg footer-container">
-          <section class="map">
-            <h3 class="heading">Maps</h3>
-            <div class="map-container">
-              <a
-                href="https://www.google.com/maps/place/V.P.+Institute+of+Management+Studies+%26+Research/@16.841187,74.6210434,14.75z/data=!4m5!3m4!1s0x3bc1225e591c9b77:0x281f0db03fdc162d!8m2!3d16.8401904!4d74.6194138"
-                target="blank"
-              >
-                <img src="src/map.png" alt="" />
-              </a>
-            </div>
-          </section>
-
-          <section class="courses-footer">
-            <h3 class="heading">Courses</h3>
-            <div class="courses-list">
-              <a href="">Bachelors's in Computer Application</a>
-              <a href="">Master of Computer Applications</a>
-              <a href="">Post Graduate Diploma in Computer Application</a>
-              <a href="">Bachelor's degree in Business Administration</a>
-              <a href="">Master of Business Administration</a>
-              <a href="">Diploma in Business Management</a>
-            </div>
-          </section>
-
-          <section class="contact-info">
-            <h3 class="heading">contact info</h3>
-            <div class="contact-container">
-              <div class="adress">
-                <span>Address</span><br />
-                Sangli-Miraj Road,Near Bharati Hospital,Wanlesswadi
-                Sangli-416414.
+              <div>
+                <div class="form-one-line-container">
+                  <div class="form-el-container">
+                    <label for="mobile">Card Expiration</label>
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="MM / YY" name="cardEx"/>
+                  </div>
+                  <div class="form-el-container">
+                    <label for="mobile">Total Amount</label>
+                    <input type="tel" autocomplete="off" id="mobile" placeholder="Amount in $" name="totalAmt"/>
+                  </div>
+                </div>
               </div>
-              <div class="phone">
-                <span>Phone</span><br />
-                +91 0233-2212427 <br />
-                +91 0233-2211467
-              </div>
-              <div class="email">
-                <span>Email</span><br />
-                <a href="mailto:admin@vpimsr.edu.in">admin@vpimsr.edu.in</a>
+
+              <div style="text-align: center">
+                <button type="submit" class="gray-btn form-btn pay-button">
+                  Submit
+                </button>
               </div>
             </div>
-          </section>
-        </div>
 
-        <hr class="hor-line" />
-
-        <div class="container-lg copyright-container">
-          <div id="copyright">
-            <div>Copyright &copy; 2022 VPIMSR</div>
-            <div>Powered by VPIMSR</div>
+            <div class="box">
+              <div>
+                <img src="src/payment/google-pay.png" alt="" width="50px" class="payment-card" />
+                <img src="src/payment/paypal.png" alt="" width="70px" class="payment-card" />
+              </div>
+              <div>
+                <img src="src/payment/QR-Code (Soham).jfif" alt="" width="300px" />
+              </div>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+        </form>
+      </div>
+    </section>
 
-    <!-- Bootstrap (Do not touch) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <footer>
+      <div class="container-lg footer-container">
+        <section class="map">
+          <h3 class="heading">Maps</h3>
+          <div class="map-container">
+            <a href="https://www.google.com/maps/place/V.P.+Institute+of+Management+Studies+%26+Research/@16.841187,74.6210434,14.75z/data=!4m5!3m4!1s0x3bc1225e591c9b77:0x281f0db03fdc162d!8m2!3d16.8401904!4d74.6194138"
+              target="blank">
+              <img src="src/map.png" alt="" />
+            </a>
+          </div>
+        </section>
+
+        <section class="courses-footer">
+          <h3 class="heading">Courses</h3>
+          <div class="courses-list">
+            <a href="">Bachelors's in Computer Application</a>
+            <a href="">Master of Computer Applications</a>
+            <a href="">Post Graduate Diploma in Computer Application</a>
+            <a href="">Bachelor's degree in Business Administration</a>
+            <a href="">Master of Business Administration</a>
+            <a href="">Diploma in Business Management</a>
+          </div>
+        </section>
+
+        <section class="contact-info">
+          <h3 class="heading">contact info</h3>
+          <div class="contact-container">
+            <div class="adress">
+              <span>Address</span><br />
+              Sangli-Miraj Road,Near Bharati Hospital,Wanlesswadi
+              Sangli-416414.
+            </div>
+            <div class="phone">
+              <span>Phone</span><br />
+              +91 0233-2212427 <br />
+              +91 0233-2211467
+            </div>
+            <div class="email">
+              <span>Email</span><br />
+              <a href="mailto:admin@vpimsr.edu.in">admin@vpimsr.edu.in</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <hr class="hor-line" />
+
+      <div class="container-lg copyright-container">
+        <div id="copyright">
+          <div>Copyright &copy; 2022 VPIMSR</div>
+          <div>Powered by VPIMSR</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap (Do not touch) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
