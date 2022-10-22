@@ -58,7 +58,7 @@
                 <tbody>
                     <?php
                     //Connection part.
-                    $servername = "localhost:3303";
+                    $servername = "localhost";
                     $username = "root";
                     $password = "";
                     $database = "vpimsr_db";

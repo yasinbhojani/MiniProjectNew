@@ -41,7 +41,7 @@
     <div class="data-sub">
         <div>
             <?php
-            $servername = "localhost:3303";
+            $servername = "localhost";
             $username = "root";
             $password = "";
             $database = "vpimsr_db";

@@ -74,18 +74,20 @@
     <!-- Admission Form -->
     <div class="data-sub">
       <div>
-
+        <!-- this is the part of enquiry form -->
         <?php
+        // checking if the request method is post or not.
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-          $servername = "localhost:3303";
+          //Connetion of database.
+          $servername = "localhost";
           $username = "root";
           $password = "";
           $database = "vpimsr_db";
 
           $conn = mysqli_connect($servername, $username, $password, $database);
 
-          if ($conn) {
-
+          if ($conn) {  // checking if connection of is done or not.
+            // initailized variable for insertion query execution.
             $fname = $_POST['fname'];
             $mname = $_POST['mname'];
             $lname = $_POST['lname'];
@@ -102,27 +104,53 @@
             @$ecourse = $_POST['course-interest'];
             $edes = $_POST['des'];
 
+            //Insert query part.
             $data = "INSERT INTO enquiry_form (fname, mname, lname, eadd, ecity, estate, epin, emobile, ecell, eemail, egender, edob, eaadhar, ecourse, edes) VALUES ('$fname','$mname','$lname','$eadd','$ecity','$estate','$epin','$emobile','$ecell','$eemail','$egender','$edob','$eaadhar','$ecourse','$edes')";
-
+            //query execution part.
             $insert = mysqli_query($conn, $data);
 
-            if ($insert) {
-              echo "Success! Your data has been stored.";
+            if ($insert) {  // checking if data stored or not.
+              echo "Success! Your data has been stored, ";
             } else {
               die("\n Data is not recorded successfully...... :(") . mysqli_error($conn);
             }
           } else {
             die("\n Connection was not done successfully...... :(");
           }
-          mysqli_close($conn);
         }
         ?>
+        <span>
+          <?php
+          $servername = 'localhost';
+          $username = 'root';
+          $password = '';
+          $db = 'vpimsr_db';
+
+          $conn = mysqli_connect($servername, $username, $password, $db);
+
+          $query = "SELECT * FROM enquiry_form ORDER BY enquiry_id desc limit 1";
+
+          $data = mysqli_query($conn, $query);
+
+          $row = mysqli_num_rows($data);
+
+          if ($row == 0) {
+            echo "zero rows in the table";
+          } else {
+            while ($report = mysqli_fetch_assoc($data)) {
+              echo "and your ragistration id is: " . $report['enquiry_id'];
+            }
+          }
+          mysqli_close($conn);
+          ?>
+        </span>
       </div>
       <div>
         <img src="src/close.svg" alt="" class="close-btn">
       </div>
     </div>
     <section class="admission-form">
+      
       <div class="container-lg">
         <div class="form-heading">
           <h2>Enquiry Form</h2>
